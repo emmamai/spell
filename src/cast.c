@@ -17,7 +17,6 @@ char* codeString = "\
     (printlist (value was true))\
     (printlist (value was false))\
 )\
-
 ";
 
 typedef enum {
@@ -87,7 +86,6 @@ listItem_t* ParseRecursiveParens( char* str, int* skip_ret ) {
     char buf[MAX_TOKEN_LEN];
     bool inToken = false;
     bool inList = false;
-
 
     //go forward until we hit a left paren, or the end
     for ( ; ( i < len ) && ( str[i] != '(' ); i++ );
